@@ -76,6 +76,7 @@
           atk
           gtk3
           customNodejs
+          bun
           zsh
         ];
       in
