@@ -7,11 +7,6 @@
   };
 
   outputs = { self, nixpkgs, flake-utils }:
-
-    # packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    # packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
     flake-utils.lib.eachDefaultSystem (
       system:
       let
@@ -77,7 +72,7 @@
           gtk3
           customNodejs
           bun
-          zsh
+          bash
         ];
       in
         {
@@ -93,7 +88,7 @@
                 echo "Custom Node.js environment loaded (version: $(${customNodejs}/bin/node -v))"
               '';
               runScript = ''
-              zsh
+              bash
               '';
             }).env;
         });
