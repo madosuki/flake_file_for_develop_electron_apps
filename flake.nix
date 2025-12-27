@@ -72,6 +72,7 @@
           gtk3
           customNodejs
           bun
+          pnpm
           bash
         ];
       in
