@@ -73,6 +73,7 @@
           customNodejs
           bun
           pnpm
+          oxlint
           bash
         ];
       in
