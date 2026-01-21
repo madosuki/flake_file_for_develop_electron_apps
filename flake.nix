@@ -38,6 +38,7 @@
           };
 
         devPackages = with pkgs; [
+          git
           openssl
           glibc
           glibc.dev
@@ -76,6 +77,8 @@
           pnpm
           oxlint
           bash
+          typescript
+          typescript-language-server
         ];
       in
         {
