@@ -70,6 +70,7 @@
           expat
           atk
           gtk3
+          gtk4
           customNodejs
           bun
           pnpm
