@@ -38,7 +38,10 @@
           };
 
         devPackages = with pkgs; [
+          # utility
           git
+
+          # libs for electron
           openssl
           glibc
           glibc.dev
@@ -48,13 +51,13 @@
           dbus
           at-spi2-core
           libGL
-          xorg.libX11
-          xorg.libXext
-          xorg.libXrandr
-          xorg.libXcomposite
-          xorg.libXdamage
-          xorg.libXfixes
-          xorg.libxcb
+          libX11
+          libXext
+          libXrandr
+          libXcomposite
+          libXdamage
+          libXfixes
+          libxcb
           stdenv.cc.cc.lib
           cups.lib
           cups
@@ -72,13 +75,24 @@
           atk
           gtk3
           gtk4
-          customNodejs
-          bun
-          pnpm
-          oxlint
-          bash
+
+          # tyepscript
           typescript
           typescript-language-server
+
+          # js runtime
+          customNodejs
+          # nodejs_24
+          bun
+
+          # package manager
+          pnpm
+
+          # lint or format tool
+          oxlint
+
+          # shell
+          bash
         ];
       in
         {
@@ -88,10 +102,11 @@
               name = "electron-dev-fhs";
               targetPkgs = pkgs: devPackages;
               profile = ''
-                export PATH=${customNodejs}/bin:$PATH
+                # export PATH=${customNodejs}/bin:$PATH
                 export PATH=$HOME/.npm_global/bin:$PATH
+
                 npm config set prefix '~/.npm_global'
-                echo "Custom Node.js environment loaded (version: $(${customNodejs}/bin/node -v))"
+                # echo "Custom Node.js environment loaded (version: $(${customNodejs}/bin/node -v))"
               '';
               runScript = ''
               bash
