@@ -11,10 +11,10 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        nodejsVersion = "v24.11.0";
+        nodejsVersion = "v24.11.1";
         nodejsSrc = pkgs.fetchurl {
             url = "https://nodejs.org/dist/${nodejsVersion}/node-${nodejsVersion}-linux-x64.tar.xz";
-            sha256 = "02ha1vqq4hq4jww1fiz3im3aybnb3rc4asd7zjj7pavki44rmnj6";
+            sha256 = "1a49h9dvl7gi136x7606vrvdg319ak18fd30r9552688a2lb1qv0";
         };
         customNodejs = pkgs.stdenv.mkDerivation {
             inherit nodejsVersion;
