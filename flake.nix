@@ -82,7 +82,6 @@
 
           # js runtime
           customNodejs
-          # nodejs_24
           bun
 
           # package manager
