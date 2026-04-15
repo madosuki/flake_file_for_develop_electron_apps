@@ -92,6 +92,7 @@
 
           # shell
           bash
+          zsh
         ];
       in
         {
@@ -108,7 +109,7 @@
                 # echo "Custom Node.js environment loaded (version: $(${customNodejs}/bin/node -v))"
               '';
               runScript = ''
-              bash
+              zsh
               '';
             }).env;
         });
