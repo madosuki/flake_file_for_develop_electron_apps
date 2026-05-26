@@ -106,9 +106,10 @@
               targetPkgs = pkgs: devPackages;
               profile = ''
                 # export PATH=${customNodejs}/bin:$PATH
-                export PATH=$HOME/.npm_global/bin:$PATH
 
-                npm config set prefix '~/.npm_global'
+                export PATH=$HOME/.npm_global/bin:$PATH
+                export NPM_CONFIG_PREFIX="~/.npm_global"
+
                 # echo "Custom Node.js environment loaded (version: $(${customNodejs}/bin/node -v))"
               '';
               runScript = ''
