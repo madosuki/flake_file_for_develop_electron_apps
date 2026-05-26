@@ -80,6 +80,9 @@
           typescript
           typescript-language-server
 
+          # vue
+          vue-language-server
+
           # js runtime
           customNodejs
           bun
