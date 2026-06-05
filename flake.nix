@@ -81,6 +81,7 @@
           typescript-language-server
 
           # vue
+          vtsls
           vue-language-server
 
           # js runtime
