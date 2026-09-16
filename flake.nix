@@ -40,6 +40,7 @@
         devPackages = with pkgs; [
           # utility
           git
+          gnupg
 
           # libs for electron
           openssl
@@ -98,7 +99,7 @@
           bash
           zsh
 
-          # command
+          # for spawn by nodejs api
           ps
         ];
       in
