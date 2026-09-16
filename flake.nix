@@ -97,6 +97,9 @@
           # shell
           bash
           zsh
+
+          # command
+          ps
         ];
       in
         {
